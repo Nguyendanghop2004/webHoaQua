@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\admins;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class SanPhamController extends Controller
@@ -11,7 +12,7 @@ class SanPhamController extends Controller
      */
     public function index()
     {
-        //
+     
     }
 
     /**

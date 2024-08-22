@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\admins\DanhMucController;
+use App\Models\DanhMuc;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/admin', function () {
-    return view('admin.dashboard');
-});
+
+
+Route::prefix('admins')
+
+    ->as('admins.')
+    ->group(function () {
+        Route::get('/', function () {
+            return view('admins/dashboard');
+        });
+        Route::get('index',             [DanhMucController::class, 'index'])->name('index');
+        Route::get('create',            [DanhMucController::class, 'create'])->name('create');
+        Route::post('store',            [DanhMucController::class, 'store'])->name('store');
+        Route::get('show/{id}',         [DanhMucController::class, 'show'])->name('show');
+        Route::get('edit/{id}',         [DanhMucController::class, 'edit'])->name('edit');
+        Route::put('update/{id}',       [DanhMucController::class, 'update'])->name('update');
+        Route::delete('destroy/{id}',   [DanhMucController::class, 'destroy'])->name('destroy');
+        Route::get('exports',           [DanhMucController::class, 'export'])->name('export');
+        Route::get('showImport',        [DanhMucController::class, 'showImport']) ->name('showImport');
+        Route::post('import',           [DanhMucController::class, 'import'])->name('import');
+    });

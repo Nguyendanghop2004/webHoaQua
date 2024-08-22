@@ -12,7 +12,7 @@
     <meta name="description" content="Ela Admin - HTML5 Admin Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {{-- css --}}
-    @include('admin.layouts.partials.css')
+    @include('admins.layouts.partials.css')
     {{-- end css --}}
     @yield('style')
     
@@ -21,7 +21,7 @@
 <body>
     <!-- Left Panel -->
     <aside id="left-panel" class="left-panel">
-        @include('admin.layouts.partials.navbar')
+        @include('admins.layouts.partials.navbar')
 
     </aside>
     <!-- /#left-panel -->
@@ -31,10 +31,10 @@
         <header id="header" class="header">
 
             {{-- top-left --}}
-            @include('admin.layouts.partials.headerTopLeft')
+            @include('admins.layouts.partials.headerTopLeft')
             {{-- end top-left --}}
             {{-- top-right --}}
-            @include('admin.layouts.partials.headerTopRight')
+            @include('admins.layouts.partials.headerTopRight')
             {{-- end top-right --}}
         </header>
         <!-- /#header -->
@@ -43,14 +43,14 @@
         <!-- /.content -->
         <div class="clearfix"></div>
         <!-- Footer -->
-        @include('admin.layouts.partials.footer')
+        @include('admins.layouts.partials.footer')
        
         <!-- /.site-footer -->
     </div>
     <!-- /#right-panel -->
 
     <!-- Scripts -->
-    @include('admin.layouts.partials.script')
+    @include('admins.layouts.partials.script')
     
 
     <!--Local Stuff-->
